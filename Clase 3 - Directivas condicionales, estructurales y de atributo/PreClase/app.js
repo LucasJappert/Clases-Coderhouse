@@ -1,23 +1,27 @@
 var app = new Vue({
     el: "#app",
     data: {
-        dibujoPrimerParrafo: true,
+        dibujoPrimerParrafo: false,
         tareas:[
             {
                 id: 1,
-                descripcion: "Tarea 1"
+                nombreImagen: "river",
+                descripcion: "C.A. River Plate"
             },
             {
                 id: 2,
-                descripcion: "Tarea 2"
+                nombreImagen: "boca",
+                descripcion: "C.A. Boca Junior"
             },
             {
                 id: 3,
-                descripcion: "Tarea 3"
+                nombreImagen: "independiente",
+                descripcion: "C.A. Independiente"
             },
             {
                 id: 4,
-                descripcion: "Tarea 4"
+                nombreImagen: "racing",
+                descripcion: "Racing Club"
             }
         ],
         cssClass: {
