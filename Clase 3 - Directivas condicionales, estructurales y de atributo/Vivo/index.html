@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <div class="divExample">Valor variable "dibujoPrimerParrafo": {{ dibujoPrimerParrafo }}</div>
+
+        <hr>
+        <div>Usando directiva v-if, v-else-if y v-else:</div>
+        <div class="divExample" v-if="caso == 1">Esta es la descripción del primer párrafo!</div>
+        <div class="divExample" v-else-if="caso == 2">Esta es la descripción del segundo párrafo!</div>
+        <div class="divExample" v-else="">Esta es la descripción del tercer párrafo!</div>
+
+        <hr>
+        <div>Usando directiva v-show:</div>
+        <div class="divExample" v-show="dibujoPrimerParrafo">Esta es la descripción del primer párrafo utilizando v-show!</div>
+
+        <hr>
+        <div class="divExample">
+            <button @click="MostrarOcultarBoton()">{{ TituloBoton }}</button>
+            <p v-if="MostrarParrafo1">
+                Este es el párrafo que está bajo del botón.
+            </p>
+        </div>
+        
+        <hr>
+        <div class="divExample miTabla">
+            <div :class="ClasesColumna(i)" v-for="(item, i) in equiposDeFutbol" :key="i">
+                <!-- <img v-bind:src="'./images/' + item.nombreImagen + '.png'" :alt="item.descripcion" height="40px" class="logoFila"> -->
+                ({{ item.id }}) - {{ item.descripcion }}
+                <span v-for="(elemento, e) in item.jugadores" :key="e"> - {{ elemento }} - </span>
+            </div>
+        </div>
+        
+        <hr>
+        <div class="divExample">
+            <div :class="ClasesParrafo1DesdeMetodo()">Ejemplo utilizando la directiva :class</div>
+        </div>
+        
+        <hr>
+        <div class="divExample">
+            <div :style="estilosParrafo">Ejemplo utilizando la directiva :style</div>
+        </div>
+        
+        <hr>
+        <div class="divExample">
+            <span :class="obtenerClaseParrafoLucas">Ejemplo Lucas</span>
+        </div>
+    </div>
+</body>
+</html>
