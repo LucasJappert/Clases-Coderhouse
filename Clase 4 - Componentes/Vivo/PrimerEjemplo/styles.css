@@ -1,0 +1,134 @@
+body {
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 60px;
+    background-color: #000;
+}
+
+.colorGreen {
+    color: greenyellow;
+}
+
+.color999 {
+    color: #999;
+}
+
+.color555 {
+    color: #555;
+}
+
+.fondoGris {
+    background-color: #333;
+}
+
+.letraAmarilla {
+    color: #FF0;
+}
+
+.mensajeBienvenida {
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    border: 5px solid black;
+}
+
+.divExample {
+    padding: 20px 50px;
+    margin: 10px 0;
+    border: 1px solid #222;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: white;
+}
+
+.divExample input {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.miTabla {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: black;
+}
+
+.miTabla div {
+    padding: 10px 60px;
+}
+
+.fondoCCC {
+    background-color: #CCC;
+}
+
+.fondo888 {
+    background-color: #888;
+}
+
+.filaTabla {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+}
+
+.logoFila {
+    position: absolute;
+    left: 10px;
+}
+
+.GrillaProducto {
+    width: 300px;
+    /* height: 250px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.contenedorProductos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagenProductoGrilla {
+    max-width: 70%;
+    max-height: 100px;
+    height: 100%;
+}
+
+.img-cropped {
+    width: 220px;
+    height: 150px;
+}
+
+.card {
+    min-width: 220px;
+    padding: 20px 10px;
+    margin: 10px 10px;
+    font-size: large;
+    color: grey;
+    border-color: palegreen;
+    border-style: solid;
+    border-width: 1px;
+    max-width: 220px;
+    background-color: whitesmoke !important;
+    transition: 0.7s;
+    display:inline-block;
+}
+.h1, h1 {
+    font-size: 1.1em;
+}
+.h3, h3 {
+    font-size: 1em;
+}
+
+.card:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+}
