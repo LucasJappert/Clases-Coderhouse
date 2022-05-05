@@ -1,6 +1,8 @@
+import {html} from 'lit-html';
+
 // Arrancando a crear mi primer componente...
 Vue.component("mi-primer-componente", {
-    template:`
+    template: html`
     <div class="divExample fondoGris">
         <h3>Este es mi primer componente!</h3>
         <div>Incluye todo lo que está dentro del borde negro.</div>
@@ -8,18 +10,17 @@ Vue.component("mi-primer-componente", {
     </div>
     `
 });
-
 //Empezamos a utilizar props...
 Vue.component("producto-grilla", {
     props: ["titulo", "precio", "srcImg"],
     template: `
-    <div class="GrillaProducto text-center">
-        <div>
-            <img :alt="titulo" :src="srcImg" class="imagenProductoGrilla" />
+        <div class="GrillaProducto text-center">
+            <div>
+                <img :alt="titulo" :src="srcImg" class="imagenProductoGrilla" />
+            </div>
+            <h3 class="text-center">{{titulo}}</h3>
+            <div class="text-center">$ {{precio}}</div>
         </div>
-        <h3 class="text-center">{{titulo}}</h3>
-        <div class="text-center">$ {{precio}}</div>
-    </div>
     `
 });
 
