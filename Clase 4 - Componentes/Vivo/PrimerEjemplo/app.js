@@ -1,12 +1,11 @@
-import {html} from 'lit-html';
-
 // Arrancando a crear mi primer componente...
 Vue.component("mi-primer-componente", {
-    template: html`
+    template:/* html */`
     <div class="divExample fondoGris">
         <h3>Este es mi primer componente!</h3>
         <div>Incluye todo lo que está dentro del borde negro.</div>
         <div>En unos minutos vamos a proponerte hacerlo vos mismo, por ahora sigue prestando atención!</div>
+        <span></span>
     </div>
     `
 });
