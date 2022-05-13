@@ -1,5 +1,5 @@
 <template>
-    <div class="grillaProducto text-center">
+  <div class="grillaProducto text-center">
         <img
             v-if="destacado"
             src="../assets/images/destacado.png"
@@ -24,17 +24,17 @@
 <script>
 export default {
     name: "Producto",
-    props: {
-        titulo: {
-            type: String,
+    props:{
+        titulo:{
+            type:String,
+            required: true,
+        },
+        precio:{
+            type: Number,
             required: true,
         },
         nombreImagen: {
             type: String,
-            required: true,
-        },
-        precio: {
-            type: Number,
             required: true,
         },
         destacado: {
@@ -46,10 +46,6 @@ export default {
         },
     },
     mounted(){
-        // this.id = 22;
-        // console.log(this.id);
-        //console.info(`El elemento raíz de este template, es: `, this.$el);
-        //console.info(`Las props de este componente son: `, this.$props);
     },
     methods: {
         getImgUrl() {
@@ -59,10 +55,10 @@ export default {
             this.$emit("agregar-al-carrito", this.id);
         },
     },
-};
+}
 </script>
 
-<style>
+<style scoped>
 .grillaProducto {
     position: relative;
     width: 300px;

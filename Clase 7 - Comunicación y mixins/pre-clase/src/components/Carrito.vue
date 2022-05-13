@@ -12,7 +12,7 @@ export default {
             productos: [],
         };
     },
-    mounted(){
+    mounted() {
         //console.info(`El data de este componente es: `, this.$data);
         //console.info(`Las options personalizadas de este componente son: `, this.$options);
         //console.info(`Los attrs establecidos por el componente padre son: `, this.$attrs);
@@ -20,23 +20,17 @@ export default {
     opcionPersonalizada: "Esta es una opción personalizada",
     methods: {
         AgregarProducto(producto) {
-            //TODO: Sumar productos iguales
-            let result = this.productos.find((prod) => {
-                return prod.id == producto.id;
-            });
-            if (result) {
-                if (result.cantidad) result.cantidad += 1;
-                else result.cantidad = 1;
-            } else {
+            //TODO: Ver de sumar productos iguales
+            let i = this.productos.findIndex((prod) => prod.id == producto.id);
+            if (i >= 0) this.productos[i].cantidad += 1;
+            else {
                 producto.cantidad = 1;
                 this.productos.push(producto);
             }
             console.log(`Producto "${producto.titulo}" agregado!`);
         },
     },
-    filters:{
-
-    }
+    filters: {},
 };
 </script>
 
