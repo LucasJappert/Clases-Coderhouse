@@ -7,7 +7,7 @@
                     <br>
                     <label for="inputNombre" class="text-start">Tu nombre</label>
                     <input @keyup="ValidarNombre" type="text" class="form-control" id="inputNombre" placeholder="Nombre completo" v-model="nombre.value">
-                    <div :class="ClaseMensajeDelMixin(nombre.isValid)"> {{nombre.message}} </div>
+                    <div :class="GetValidClass(nombre.isValid)"> {{nombre.message}} </div>
                     <br>
                     <p>Validar nombre: <span class="text-success fw-bold">{{ nombre.value.length }}</span></p>
                     <br>
@@ -185,7 +185,10 @@ export default {
                 this.nombre.isValid = true;
                 this.nombre.message = "Correcto!";
             }
-        }
+        },
+        GetValidClass(isValid){
+            return isValid ? "valid" : "inValid";
+        },
     },
     watch:{
         //watch sobre objetos
@@ -207,9 +210,8 @@ export default {
 
 <style scoped>
 .container{
-    background-color: white;
-    padding: 20px 40px;
-    box-shadow: 0 0 10px #aaa;
+    width:100%;
+    max-width:700px;
 }
 a {
   color: #42b983;

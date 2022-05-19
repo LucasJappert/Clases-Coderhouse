@@ -10,6 +10,11 @@
 export default {
     name: "App",
     components: {},
+    beforeCreate(){
+    },
+    created(){
+
+    },
     mounted(){
     }
 };

@@ -1,7 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
+
+
 Vue.use(VueRouter);
+
+
+
 const routes = [
     {
       path: "/",
@@ -17,6 +22,16 @@ const routes = [
         path: "/Clase9",
         name: "Clase9",
         component: () => import("../views/Clase9/Clase9"),
+    },
+    {
+        path: "/Clase10",
+        name: "Clase10",
+        component: () => import("../views/Clase10/Clase10.vue")
+    },
+    {
+        path: "/Clase9/:id",
+        name: "TestRoutDinamico",
+        component: () => import("../views/Clase9/TestRoutDinamico.vue")
     },
 ];
 

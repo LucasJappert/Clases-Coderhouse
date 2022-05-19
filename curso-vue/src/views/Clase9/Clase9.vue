@@ -4,6 +4,7 @@
           <Titulo text="Clase 9 - Router y life cycle hooks"></Titulo>
           <TestPadre></TestPadre>
           <!-- <Desafio2></Desafio2> -->
+          <!-- <TestWatch></TestWatch> -->
       </div>
   </div>
 </template>
@@ -14,8 +15,9 @@
 export default {
     components:{
         Titulo: ()=> import("../../components/Titulo.vue"),
-        TestPadre: ()=> import("./TestPadre.vue"),
-        Desafio2: ()=> import("./Desafio2.vue"),
+        TestPadre: ()=> import("../../components/Clase9/TestPadre.vue"),
+        Desafio2: ()=> import("../../components/Clase9/Desafio2.vue"),
+        TestWatch: ()=> import("../../components/Clase9/TestWatch.vue"),
     },
 }
 </script>

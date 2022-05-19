@@ -9,7 +9,7 @@
 import printHooks from "../../mixins/printHooks";
 export default {
     name: "TestHijo",
-    // mixins: [printHooks],
+    // mixins: [printHooks], //DESCOMENTAR PARA PROBAR TODOS LOS HOOKS
     data() {
         return {
             contador: 0,
@@ -23,12 +23,11 @@ export default {
         //     if (this.contador >= 5) clearInterval(idInterval);
         // } , 1000);
 
-        //TODO: Forzar al destroy
+        //Forzar al destroy
         //setTimeout(() => this.cancelarEventos(), 1000);
     },
     methods:{
         cancelarEventos() {
-            console.log("asdas");
             this.$destroy();
         },
     }

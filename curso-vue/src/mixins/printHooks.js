@@ -45,9 +45,4 @@ export default {
         console.log(`Valor de "this.$data": ---> ${this.$data}`);
         console.log(`Valor de "this.$data": ---> ${this.$data.campoTestPrintHooks}`);
     },
-    methods:{
-        ClaseMensajeDelMixin(isValid){
-            return isValid ? "valid" : "inValid";
-        },
-    }
 }

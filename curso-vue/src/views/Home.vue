@@ -1,17 +1,26 @@
 <template>
     <div class="containerHome">
+
         <div class="h1">Bienvenidos</div>
         <div>
             Aquí detallamos el contenido de bienvenida dedicado al usuario que accede a esta SPA.
         </div>
 
         <br><br>
+
         <router-link class="btn btn-success buttonClases" to="/Clase8">
             Clase 8 - Formularios y validaciones
         </router-link>
         <router-link class="btn btn-success buttonClases" to="/Clase9">
             Clase 9 - Router y life cycle hooks
         </router-link>
+        <router-link class="btn btn-success buttonClases" to="/Clase10">
+            Clase 10 - .....
+        </router-link>
+        <!-- <router-link class="btn btn-success buttonClases" to="/Clase10/12">
+            Clase 10 - Dinamico
+        </router-link> -->
+
     </div>
 </template>
 

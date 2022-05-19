@@ -16,7 +16,4 @@ export default {
 </script>
 
 <style lang="scss">
-.container{
-    width:600px;
-}
 </style>
