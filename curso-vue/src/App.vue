@@ -22,4 +22,5 @@ export default {
 
 <style lang="scss" scoped>
 @import "./css/general.scss";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
 </style>

@@ -5,6 +5,7 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/general.scss";
 
+
 Vue.config.productionTip = false
 
 new Vue({

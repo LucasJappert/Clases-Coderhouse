@@ -15,7 +15,7 @@
             Clase 9 - Router y life cycle hooks
         </router-link>
         <router-link class="btn btn-success buttonClases" to="/Clase10">
-            Clase 10 - .....
+            Clase 10 - Consumo de APIs
         </router-link>
         <!-- <router-link class="btn btn-success buttonClases" to="/Clase10/12">
             Clase 10 - Dinamico

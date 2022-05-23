@@ -1,0 +1,4 @@
+###
+GET https://628b9617667aea3a3e3289a2.mockapi.io/api/courses
+
+
