@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <router-link class="btn btn-primary" to="/" v-if="this.$route.path != '/'">&#8592; Volver</router-link>
+        <button class="btn btn-primary" @click="$router.back()" v-if="this.$route.path != '/'">&#8592; Volver</button>
         <br><br>
         <router-view />
     </div>
@@ -16,7 +16,7 @@ export default {
 
     },
     mounted(){
-    }
+    },
 };
 </script>
 

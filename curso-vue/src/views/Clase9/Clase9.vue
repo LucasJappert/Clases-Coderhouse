@@ -1,7 +1,7 @@
 <template>
   <div>
       <div class="container text-center">
-          <Titulo text="Clase 9 - Router y life cycle hooks"></Titulo>
+          <Titulo>Clase 9 - Router y life cycle hooks</Titulo>
           <TestPadre></TestPadre>
           <!-- <Desafio2></Desafio2> -->
           <!-- <TestWatch></TestWatch> -->
@@ -14,7 +14,6 @@
 // import Desafio2 from "./Desafio2.vue";
 export default {
     components:{
-        Titulo: ()=> import("../../components/Titulo.vue"),
         TestPadre: ()=> import("../../components/Clase9/TestPadre.vue"),
         Desafio2: ()=> import("../../components/Clase9/Desafio2.vue"),
         TestWatch: ()=> import("../../components/Clase9/TestWatch.vue"),

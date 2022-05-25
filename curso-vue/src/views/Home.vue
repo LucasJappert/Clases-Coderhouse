@@ -8,14 +8,17 @@
 
         <br><br>
 
-        <router-link class="btn btn-success buttonClases" to="/Clase8">
+        <router-link class="btn btn-success buttonClases" :to="{ name: 'Clase8' }">
             Clase 8 - Formularios y validaciones
         </router-link>
-        <router-link class="btn btn-success buttonClases" to="/Clase9">
+        <router-link class="btn btn-success buttonClases" :to="{ name: 'Clase9' }">
             Clase 9 - Router y life cycle hooks
         </router-link>
-        <router-link class="btn btn-success buttonClases" to="/Clase10">
+        <router-link class="btn btn-success buttonClases" :to="{ name: 'Clase10' }">
             Clase 10 - Consumo de APIs
+        </router-link>
+        <router-link class="btn btn-success buttonClases" :to="{ name: 'Clase11' }">
+            Clase 11 - Introducción a Vuex
         </router-link>
         <!-- <router-link class="btn btn-success buttonClases" to="/Clase10/12">
             Clase 10 - Dinamico

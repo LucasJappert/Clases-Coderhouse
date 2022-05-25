@@ -74,7 +74,7 @@ export default {
     mounted(){
         //this.GetUsers();
         this.GetCoursesWithAxios();
-        this.Saludar();
+        //this.Saludar();
     },
     methods:{
         async GetUsers(){

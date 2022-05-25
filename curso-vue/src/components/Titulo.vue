@@ -1,17 +1,12 @@
 <template>
     <div class="Titulo">
-        {{ text }}
+        <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-    name: "Titulo",
-    props: {
-        text: {
-            type: String,
-        },
-    },
+    name: "Titulo"
 };
 </script>
 

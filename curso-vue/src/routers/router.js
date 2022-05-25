@@ -33,6 +33,11 @@ const routes = [
         name: "TestRoutDinamico",
         component: () => import("../views/Clase9/TestRoutDinamico.vue")
     },
+    {
+        path: "/Clase11",
+        name: "Clase11",
+        component: () => import("../views/Clase11/Clase11.vue")
+    }
 ];
 
 

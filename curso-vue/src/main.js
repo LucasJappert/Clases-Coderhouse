@@ -5,17 +5,20 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/general.scss";
 import utils from "./mixins/utils";
+import store from "./store";
 
+//#region COMPONENTES GLOBALES
+Vue.component('Titulo', ()=> import("./components/Titulo.vue"));
+Vue.component('SubTitulo', ()=> import("./components/SubTitulo.vue"));
+//#endregion -------------------------
+
+//#region MIXINS GLOBALES
 Vue.mixin(utils);
-
-// Vue.mixin({
-//     Saludar() {
-//       console.log("Hola!");
-//     }
-// });
+//#endregion -------------------------
 
 Vue.config.productionTip = false
 new Vue({
-  router,
-  render: h => h(App),
+    store,
+    router,
+    render: h => h(App),
 }).$mount('#app')
