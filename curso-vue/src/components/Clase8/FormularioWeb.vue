@@ -195,10 +195,6 @@ export default {
         email: {
             // eslint-disable-next-line
             handler: function (newValue, oldValue) {
-                // console.log(`Nuevo valor: ${newValue.value}`);
-                // console.log(`Valor anterior: ${oldValue.value}`);
-                // console.log(/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/.test(newValue.value));
-                console.log(newValue.value.indexOf("@") > -1);
                 this.email.isValid = newValue.value.indexOf("@") > -1;
             },
             deep: true

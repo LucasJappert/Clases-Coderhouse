@@ -24,7 +24,7 @@
         </ul>
 
         <!-- courses -->
-        <ul v-if="true">
+        <ul v-if="false">
             <li v-for="item in courses" :key="item.id">
                 {{ item.name }}
             </li>
@@ -61,11 +61,10 @@
 </template>
 
 <script>
-import printHooks from "../../mixins/printHooks";
-const axios = require('axios')
+const axios = require('axios');
+
 export default {
     name: "Clase10",
-    // mixins:[printHooks],
     data(){
         return{
             users:[],
@@ -74,7 +73,8 @@ export default {
     },
     mounted(){
         //this.GetUsers();
-        //this.GetCoursesWithAxios();
+        this.GetCoursesWithAxios();
+        this.Saludar();
     },
     methods:{
         async GetUsers(){
@@ -83,8 +83,8 @@ export default {
                 //console.log(response);
                 return response.json();
             })
-            .then(data => {
-                console.table(data);
+            .then(json => {
+                //console.table(json);
                 //this.users = data;
             })
             .catch(err => console.log(err))
@@ -92,12 +92,12 @@ export default {
         },
         async GetUsersWithAbortController(){
             const controller = new AbortController();
-            const signal = controller.signal;
+            //const signal = controller.signal;
             setTimeout(() => {
                 controller.abort()
-            }, 200);
+            }, 1000);
             let start = performance.now();
-            await fetch(`${process.env.VUE_APP_API_URL}/api/users`, { signal })
+            await fetch(`${process.env.VUE_APP_API_URL}/api/users`, { signal: controller.signal })
             //.then(this.Sleeper(1100))
             // fetch(`${process.env.VUE_APP_API_URL}/api/users`)
             .then(response => {
@@ -129,11 +129,11 @@ export default {
             .finally(() => console.log("Finalizó la petición de datos remotos..."));
         },
         async TestPOSTCourseUsingFetch(){
-             const cursoData = {
+            const cursoData = {
                 name: "React",
                 hours: 31
             }
-             const encabezado = {
+            const encabezado = {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -148,9 +148,9 @@ export default {
         async TestPUTCourseUsingFetch(){
              const cursoData = {
                 name: "Angular",
-                hours: 31
+                hours: 35
             }
-             const encabezado = {
+            const encabezado = {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -163,7 +163,7 @@ export default {
             .catch(error => console.log(error));
         },
         async TestDELETECourseUsingFetch(id = 4){
-             const encabezado = {
+            const encabezado = {
                 method: "DELETE"
             }
             await fetch(`${process.env.VUE_APP_API_URL}/api/courses/${id}`, encabezado)
@@ -171,6 +171,7 @@ export default {
             .then(json => console.log(json))
             .catch(error => console.log(error));
         },
+
 
         async GetCoursesWithAxios(){
             //console.log(1);
@@ -188,7 +189,7 @@ export default {
             //console.log(3);
         },
         async TestPOSTCourseUsingAxios(){
-             const cursoData = {
+            const cursoData = {
                 name: "React",
                 hours: 31
             }
@@ -200,7 +201,7 @@ export default {
             .catch(error => console.log(error));
         },
         async TestPUTCourseUsingAxios(){
-             const cursoData = {
+            const cursoData = {
                 name: "Angular",
                 hours: 35
             }
@@ -219,6 +220,9 @@ export default {
             })
             .catch(error => console.log(error));
         },
+
+
+
         DeleteCourse(idCourse){
             this.TestDELETECourseUsingAxios(idCourse);
         },
