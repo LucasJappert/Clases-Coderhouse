@@ -37,6 +37,11 @@ const routes = [
         path: "/Clase11",
         name: "Clase11",
         component: () => import("../views/Clase11/Clase11.vue")
+    },
+    {
+        path: "/Clase12",
+        name: "Clase12",
+        component: () => import("../views/Clase12/Clase12.vue")
     }
 ];
 

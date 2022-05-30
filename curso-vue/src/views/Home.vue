@@ -20,6 +20,9 @@
         <router-link class="btn btn-success buttonClases" :to="{ name: 'Clase11' }">
             Clase 11 - Introducción a Vuex
         </router-link>
+        <router-link class="btn btn-success buttonClases" :to="{ name: 'Clase12' }">
+            Clase 12 - Vuex en Vue
+        </router-link>
         <!-- <router-link class="btn btn-success buttonClases" to="/Clase10/12">
             Clase 10 - Dinamico
         </router-link> -->

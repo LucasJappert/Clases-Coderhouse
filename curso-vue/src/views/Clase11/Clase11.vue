@@ -7,13 +7,13 @@
         <PrimerEjemplo></PrimerEjemplo>
     </div>
 
-    <div class="container">
-        <div><u>Componente que usaremos para cargar datos al store:</u></div>
+    <div class="container" v-if="true">
+        <SubTitulo>Componente que usaremos para cargar datos al store:</SubTitulo>
         <CargarDatos></CargarDatos>
     </div>
 
-    <div class="container">
-        <div><u>Componente que usaremos para mostrar los datos del store:</u></div>
+    <div class="container" v-if="true">
+        <SubTitulo>Componente que usaremos para mostrar datos del store:</SubTitulo>
         <MostrarDatos></MostrarDatos>
     </div>
     <br>
