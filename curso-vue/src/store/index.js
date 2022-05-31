@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Vuex from 'vuex';
-import products from "./Clase12/products";
-import users from "./Clase12/users";
+import products from "./modules/Clase12/products";
+import users from "./modules/Clase12/users";
 
 Vue.use(Vuex);
 

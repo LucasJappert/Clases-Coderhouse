@@ -5,7 +5,7 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/general.scss";
 import utils from "./mixins/utils";
-import store from "./store";
+import store from "./store/index.js";
 
 //#region COMPONENTES GLOBALES
 Vue.component('Titulo', ()=> import("./components/Titulo.vue"));

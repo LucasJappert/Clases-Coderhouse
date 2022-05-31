@@ -4,13 +4,14 @@ export default {
     namespaced: true,
     state: {
         users: [],
+        variable3: 55
     },
     getters: {
 
     },
     mutations: {
-        setUsers(state, data) {
-            state.users = data;
+        setUsers(state, payload) {
+            state.users = payload;
         }
     },
     actions: {
@@ -24,17 +25,17 @@ export default {
                                         return { id, firstName, lastName, age };
                                     }
                 );
+                console.log(result);
                 return result;
             })
             .catch(error => {
                 console.error(error);
             });
+
+
             if (result != null){
                 commit('setUsers', result);
             }
         }
     },
-    modules: {
-
-    }
 }

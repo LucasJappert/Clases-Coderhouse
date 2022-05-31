@@ -4,8 +4,8 @@ export default {
     namespaced: true,
     state: {
         products: [],
-        variable3: 4,
-        variable4: 55
+        variable3: 44,
+        variable4: 66
     },
     getters: {
         getLastProducts: (state) => (length) => {
@@ -19,6 +19,7 @@ export default {
     },
     actions: {
         async setProducts({ commit }){
+            console.log("llego a setProducts");
             let result = null;
             result = await axios.get(`${apiURL}/products`)
             .then(response => {
