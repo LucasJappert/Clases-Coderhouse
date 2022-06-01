@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkcurso_vue"]=self["webpackChunkcurso_vue"]||[]).push([[997],{5997:function(u,e,t){t.r(e),t.d(e,{default:function(){return i}});var l=function(){var u=this,e=u.$createElement,t=u._self._c||e;return t("div",{staticClass:"SubTitulo"},[u._t("default")],2)},n=[],s={name:"SubTitulo"},r=s,c=t(1001),a=(0,c.Z)(r,l,n,!1,null,null,null),i=a.exports}}]);
+//# sourceMappingURL=997.b8fcdaec.js.map
