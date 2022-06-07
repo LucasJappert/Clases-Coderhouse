@@ -2,7 +2,6 @@ import Vue from "vue";
 import Vuex from 'vuex';
 import products from "./modules/Clase12/products";
 import users from "./modules/Clase12/users";
-
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -52,14 +51,16 @@ export default new Vuex.Store({
             context.commit("messageHistory");
         },
         setVariable1({ commit }, data) {
-            commit("setVariable1");
+            commit("setVariable1", data);
         },
-        setVariable2({commit}, data) {
-            commit("setVariable2");
+        setVariable2({ commit }, data) {
+            commit("setVariable2", data);
         },
     },
     modules: {
         products, users
     }
 })
+
+
 

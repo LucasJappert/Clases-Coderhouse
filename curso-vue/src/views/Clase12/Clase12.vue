@@ -22,7 +22,7 @@
 
 
         <div class="container">
-            <SubTitulo>Ahora veremos cómo acceder a lo mismo, implementando un mapState para todos estos getters y que quede más prolijo!:</SubTitulo>
+            <SubTitulo>Ahora veremos cómo acceder a lo mismo, implementando un mapState para reemplazar todos estos getters y que quede más prolijo!:</SubTitulo>
             <div><b>✔ Óptimo!</b></div>
             <div>Este es el valor de la variable1: (comprobamos que es el mismo)</div>
             ➤ {{ variable1}}
@@ -36,12 +36,6 @@
         <div class="container">
             <SubTitulo>Accediendo al store de <b>users</b>:</SubTitulo>
         </div>
-        <!-- {{ productVariable3 }} -->
-        <hr>
-
-        <!-- {{ productVariable4 }} -->
-        <hr>
-        <!-- {{ getLastProducts(1) }} -->
     </div>
 </template>
 
