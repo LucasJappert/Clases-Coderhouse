@@ -25,8 +25,8 @@
 
         <br /><br />
         <EjemploSlots>
-            <template v-slot:slot1>
-                <h3>Aquí podría ir un título de página</h3>
+            <template #slot1="{ variable1 }">
+                <h3>Aquí podría ir un título de página {{variable1}}</h3>
             </template>
 
             <p>Un párrafo para el contenido principal.</p>
