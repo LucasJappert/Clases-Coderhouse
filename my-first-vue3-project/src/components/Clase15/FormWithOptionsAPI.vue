@@ -43,12 +43,15 @@ export default {
     },
     methods:{
         submitForm(){
-            //console.log(this.v$);
             this.v$.$validate();
-            if (!this.v$.$error) console.log('✔ Datos del formulario CORRECTOS!');
-            else console.log('❌ Datos del formulario INCORRECTOS!');
+            console.log(this.v$);
+            if (!this.v$.$error)
+                console.log('✔ Datos del formulario CORRECTOS!');
+            else
+                console.log('❌ Datos del formulario INCORRECTOS!');
         },
     },
+    //Reglas de validación
     validations() {
   		return {
   			email: { required, email },
