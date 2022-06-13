@@ -13,10 +13,11 @@ import Contador from "./Contador.vue";
 import { ref } from 'vue';
 export default {
     components:{ Contador },
-    setup(){
+    setup(props, context){
+        //console.log(this);
         let contador = ref(1);
 
-        return{ contador };
+        return { contador };
     }
 }
 </script>

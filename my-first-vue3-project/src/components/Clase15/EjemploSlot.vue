@@ -2,7 +2,7 @@
     <div>
         <slot name="slot1"></slot>
         <slot name="slot2"></slot>
-        <slot name="slot3" :variable1="variable1">Slot 3</slot>
+        <slot name="slot3" :variable1="variable1"></slot>
     </div>
 </template>
 

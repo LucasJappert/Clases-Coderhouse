@@ -3,26 +3,24 @@
 </template>
 
 <script>
-    // export default {
-    //     props:{
-    //         contadorProp:{
-    //             type: Number,
-    //             required: true
-    //         }
-    //     }
-    // }
-</script>
-<script setup>
-    import { defineProps } from 'vue';
-
-    defineProps({
-        contadorProp:{
-            type: Number,
-            required: true
+    /* eslint-disable */
+    import { watchEffect } from "vue";
+    export default {
+        props:{
+            contadorProp:{
+                type: Number,
+                required: true
+            }
+        },
+        setup(props){
+            watchEffect(() => {
+                //console.log(props.contadorProp);
+            })
         }
-    });
+    }
 </script>
 
-<style>
+
+<style setup>
 
 </style>

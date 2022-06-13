@@ -41,6 +41,9 @@ export default {
             }
         };
     },
+    mounted(){
+        console.log(this.v$);
+    },
     methods:{
         submitForm(){
             this.v$.$validate();
